@@ -1,0 +1,10 @@
+<launch>
+  <node name="joy" pkg="joy" type="joy_node"/>
+
+  <node name="irobot_teleop" pkg="irobot_teleop" type="teleop.py">
+    <param name="axis_angular" type="int" value="0"/>
+    <param name="axis_linear" type="int" value="2"/>
+    <param name="scale_angular" type="double" value="1"/>
+    <param name="scale_linear" type="double" value="1"/>
+  </node>
+</launch>
