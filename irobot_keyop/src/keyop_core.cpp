@@ -412,12 +412,7 @@ void KeyOpCore::incrementLinearVelocity()
   }
   else
   {
-    if (cmd->linear.x <= linear_vel_max)
-    {
-      cmd->linear.x += linear_vel_step;
-    }
-    ROS_INFO_STREAM("KeyOp: linear  velocity incremented [" << cmd->linear.x << "|" << cmd->angular.z << "]");
-    //ROS_WARN_STREAM("KeyOp: motors are not yet powered up.");
+    ROS_WARN_STREAM("KeyOp: motors are not yet powered up.");
   }
 }
 
