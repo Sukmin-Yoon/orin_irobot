@@ -111,7 +111,7 @@ bool KeyOpCore::init()
   /*********************
    ** Publishers
    **********************/
-  velocity_publisher_ = nh.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
+  velocity_publisher_ = nh.advertise<geometry_msgs::Twist>("cmd_vel", 1);
 
   /*********************
    ** Velocities
