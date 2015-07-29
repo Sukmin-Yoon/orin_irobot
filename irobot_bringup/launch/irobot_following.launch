@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find irobot_bringup)/launch/marker_tracking.launch"/>
+
+    <node pkg="irobot_create_2_1" name="irobot_1" type="driver.py">
+    </node>
+
+    <node pkg="uvc_camera" name="cam" type="uvc_camera_node"/>
+</launch>

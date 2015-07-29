@@ -1,0 +1,11 @@
+<launch>
+    <include file="$(find irobot_brinup)/launch/marker_tracking.launch"/>
+
+    <node pkg="irobot_create_2_1" name="irobot_1" type="driver.py">
+	<remap from="/cmd_vel" to="/cmd_vel_irobot_1"/>
+    </node>
+
+    <node pkg="irobot_create_2_1" name="irobot_2" type="driver.py">
+	<remap from="/cmd_vel" to="/cmd_vel_irobot_2"/>
+    </node>
+</launch>
