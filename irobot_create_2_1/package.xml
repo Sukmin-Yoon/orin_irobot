@@ -1,0 +1,26 @@
+<package>
+  <name>irobot_create_2_1</name>
+  <version>0.0.1</version>
+
+  <description>
+ irobot_create_2_1 is a ROS driver for the iRobot iCreate.
+  </description>
+  <author>Graylin Trevor Jay, Brian Thomas</author>
+  <maintainer email="jwindelen@fastmail.com">Johannes Windelen</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>tf2</run_depend>
+
+</package>
