@@ -66,10 +66,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(
-   DEPENDENCIES
-   std_msgs
- )
+#generate_messages(
+#  DEPENDENCIES
+#  std_msgs
+# )
 
 ###################################
 ## catkin specific configuration ##
@@ -80,12 +80,12 @@ generate_messages(
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
-  INCLUDE_DIRS include
+#catkin_package(
+#  INCLUDE_DIRS include
 #  LIBRARIES irobot_pose_con
-  CATKIN_DEPENDS roscpp rospy std_msgs
-  DEPENDS system_lib
-)
+#  CATKIN_DEPENDS roscpp rospy std_msgs
+#  DEPENDS system_lib
+#)
 
 ###########
 ## Build ##
@@ -104,7 +104,7 @@ include_directories(
 # )
 
 ## Declare a cpp executable
- add_executable(irobot_pose_con_node src/irobot_pose_con_node.cpp)
+ add_executable(irobot_pose_con_node src/irobot_pose_con.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -129,11 +129,9 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS irobot_pose_con irobot_pose_con_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+install(TARGETS irobot_pose_con_node
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/

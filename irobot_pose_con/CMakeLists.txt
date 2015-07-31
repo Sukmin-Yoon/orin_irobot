@@ -66,10 +66,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(
-   DEPENDENCIES
-   std_msgs
- )
+#generate_messages(
+#  DEPENDENCIES
+#  std_msgs
+# )
 
 ###################################
 ## catkin specific configuration ##
@@ -81,7 +81,7 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
+#  INCLUDE_DIRS include
 #  LIBRARIES irobot_pose_con
   CATKIN_DEPENDS roscpp rospy std_msgs
   DEPENDS system_lib
@@ -129,11 +129,9 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS irobot_pose_con irobot_pose_con_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+install(TARGETS irobot_pose_con_node
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
